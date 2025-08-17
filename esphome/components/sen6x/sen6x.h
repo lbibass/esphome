@@ -119,13 +119,11 @@ class SEN6XComponent : public PollingComponent, public sensirion_common::Sensiri
 
   std::string product_name_;
   uint8_t serial_number_[4];
-  uint16_t firmware_version_;
   Sen6xBaselines voc_baselines_storage_;
   bool store_baseline_;
   uint32_t seconds_since_last_store_;
   ESPPreferenceObject pref_;
   optional<RhtAccelerationMode> acceleration_mode_;
-  optional<uint32_t> auto_cleaning_interval_;
   optional<GasTuning> voc_tuning_params_;
   optional<GasTuning> nox_tuning_params_;
   optional<TemperatureCompensation> temperature_compensation_;
